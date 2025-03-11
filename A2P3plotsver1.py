@@ -9,12 +9,13 @@ Created on Sun Feb 23 03:03:04 2025
 import numpy as np
 import matplotlib.pyplot as plt
 
+#Changed Some of the Functions
 def r1(kT, A, K):
-    return ((-2*np.exp(K/kT)*np.sinh(2*A/kT))/
+    return ((-np.exp(K/kT)*np.sinh(2*A/kT))/
             ((np.exp(K/kT)*np.cosh(2*A/kT))+1))
     
 def r1r2(kT, A, K):
-    return ((4*np.exp(K/kT)*(np.exp(K/kT) + np.cosh((2*A)/kT)))/
+    return ((np.exp(2*K/kT)-1)/
             (((np.exp(K/kT)*np.cosh(2*A/kT))+1)**2))
 
 
